@@ -1,0 +1,3094 @@
+; .\ataoe.SRC generated from: ataoe.c
+; COMPILER INVOKED BY:
+;        C:\Keil\C51\BIN\C51.EXE ataoe.c LARGE BROWSE DEBUG OBJECTEXTEND SRC(.\ataoe.SRC)
+
+$NOMOD51
+
+NAME	ATAOE
+
+ACC7	BIT	0E0H.7
+WCONF	DATA	0FFH
+P0	DATA	080H
+P1	DATA	090H
+P2	DATA	0A0H
+P3	DATA	0B0H
+AC	BIT	0D0H.6
+EA	BIT	0A8H.7
+ISPDATA	DATA	0F4H
+DPH0	DATA	083H
+IE	DATA	0A8H
+DPH1	DATA	085H
+P0_0	BIT	080H.0
+P1_0	BIT	090H.0
+P0_1	BIT	080H.1
+DPL0	DATA	082H
+P2_0	BIT	0A0H.0
+P1_1	BIT	090H.1
+P0_2	BIT	080H.2
+DPL1	DATA	084H
+P3_0	BIT	0B0H.0
+P2_1	BIT	0A0H.1
+P1_2	BIT	090H.2
+P0_3	BIT	080H.3
+P3_1	BIT	0B0H.1
+P2_2	BIT	0A0H.2
+P1_3	BIT	090H.3
+P0_4	BIT	080H.4
+P3_2	BIT	0B0H.2
+P2_3	BIT	0A0H.3
+P1_4	BIT	090H.4
+P0_5	BIT	080H.5
+TA	DATA	0C7H
+EXF2	BIT	0C8H.1
+P3_3	BIT	0B0H.3
+P2_4	BIT	0A0H.4
+P1_5	BIT	090H.5
+P0_6	BIT	080H.6
+P3_4	BIT	0B0H.4
+P2_5	BIT	0A0H.5
+P1_6	BIT	090H.6
+P0_7	BIT	080H.7
+ES	BIT	0A8H.4
+P3_5	BIT	0B0H.5
+P2_6	BIT	0A0H.6
+P1_7	BIT	090H.7
+P3_6	BIT	0B0H.6
+P2_7	BIT	0A0H.7
+IP	DATA	0B8H
+P3_7	BIT	0B0H.7
+RI	BIT	098H.0
+CY	BIT	0D0H.7
+TI	BIT	098H.1
+DPX0	DATA	093H
+DPX1	DATA	095H
+PS	BIT	0B8H.4
+SP	DATA	081H
+OV	BIT	0D0H.2
+EWDI	BIT	0E8H.4
+WDIF	BIT	0D8H.3
+DPX0BK	DATA	0F6H
+RLDH	DATA	0CBH
+DPX1BK	DATA	0F7H
+RCLK	BIT	0C8H.2
+TCLK	BIT	0C8H.3
+RLDL	DATA	0CAH
+SBUF	DATA	099H
+PCON	DATA	087H
+SCON	DATA	098H
+PWDI	BIT	0F8H.4
+TMOD	DATA	089H
+TCON	DATA	088H
+IE0	BIT	088H.1
+IE1	BIT	088H.3
+MXAX	DATA	0EAH
+B	DATA	0F0H
+WTRF	BIT	0D8H.2
+ACC	DATA	0E0H
+ES0	BIT	0A8H.4
+ET0	BIT	0A8H.1
+CT2	BIT	0C8H.6
+ET1	BIT	0A8H.3
+TF0	BIT	088H.5
+ET2	BIT	0A8H.5
+TF1	BIT	088H.7
+RB8	BIT	098H.2
+TF2	BIT	0C8H.0
+RAMBA16	DATA	0FAH
+TH0	DATA	08CH
+EX0	BIT	0A8H.0
+IT0	BIT	088H.0
+TH1	DATA	08DH
+EX1	BIT	0A8H.2
+TB8	BIT	098H.3
+IT1	BIT	088H.2
+TH2	DATA	0CDH
+P	BIT	0D0H.0
+RAMEA16	DATA	0FCH
+SM0	BIT	098H.7
+TL0	DATA	08AH
+SM1	BIT	098H.6
+TL1	DATA	08BH
+SM2	BIT	098H.5
+TL2	DATA	0CCH
+PS0	BIT	0B8H.4
+EIE	DATA	0E8H
+WTST	DATA	092H
+PT0	BIT	0B8H.1
+EIF	DATA	091H
+RS0	BIT	0D0H.3
+PT1	BIT	0B8H.3
+RS1	BIT	0D0H.4
+TR0	BIT	088H.4
+TR1	BIT	088H.6
+PX0	BIT	0B8H.0
+TR2	BIT	0C8H.5
+PX1	BIT	0B8H.2
+DPH	DATA	083H
+EIP	DATA	0F8H
+CKCBK	DATA	0F5H
+DPL	DATA	082H
+SBUF0	DATA	099H
+EINT2	BIT	0E8H.0
+EXEN2	BIT	0C8H.4
+EINT3	BIT	0E8H.1
+CPRL2	BIT	0C8H.7
+REN	BIT	098H.4
+EINT5	BIT	0E8H.3
+T2CON	DATA	0C8H
+DPS	DATA	086H
+DPTR0	DATA	082H
+DPTR1	DATA	084H
+PINT2	BIT	0F8H.0
+PINT3	BIT	0F8H.1
+CKCON	DATA	08EH
+EWT	BIT	0D8H.1
+B0	BIT	0F0H.0
+PINT5	BIT	0F8H.3
+ISPADDR16	DATA	0F2H
+B1	BIT	0F0H.1
+B2	BIT	0F0H.2
+B3	BIT	0F0H.3
+TMPR0	DATA	0FAH
+B4	BIT	0F0H.4
+F0	BIT	0D0H.5
+TMPR1	DATA	0FBH
+DPSBK	DATA	0F9H
+B5	BIT	0F0H.5
+F1	BIT	0D0H.1
+TMPR2	DATA	0FCH
+ACC0	BIT	0E0H.0
+B6	BIT	0F0H.6
+TMPR3	DATA	0FDH
+ACC1	BIT	0E0H.1
+B7	BIT	0F0H.7
+ACC2	BIT	0E0H.2
+ACC3	BIT	0E0H.3
+ISPID	DATA	0F1H
+PSW	DATA	0D0H
+ACC4	BIT	0E0H.4
+ACC5	BIT	0E0H.5
+WDCON	DATA	0D8H
+RWT	BIT	0D8H.0
+ACC6	BIT	0E0H.6
+?PR?_DumpAtaHdr?ATAOE                    SEGMENT CODE 
+?XD?_DumpAtaHdr?ATAOE                    SEGMENT XDATA OVERLAYABLE 
+?PR?_DumpATAIssue?ATAOE                  SEGMENT CODE 
+?XD?_DumpATAIssue?ATAOE                  SEGMENT XDATA OVERLAYABLE 
+?PR?_DumpATAConfig?ATAOE                 SEGMENT CODE 
+?XD?_DumpATAConfig?ATAOE                 SEGMENT XDATA OVERLAYABLE 
+?PR?_DumpATAMacMask?ATAOE                SEGMENT CODE 
+?PR?_DumpATAReserveRelease?ATAOE         SEGMENT CODE 
+?PR?_SendConfigAck?ATAOE                 SEGMENT CODE 
+?XD?_SendConfigAck?ATAOE                 SEGMENT XDATA OVERLAYABLE 
+?PR?_ReadReg8?ATAOE  SEGMENT CODE 
+?XD?ATAOE            SEGMENT XDATA 
+?XD?_ReadReg8?ATAOE  SEGMENT XDATA OVERLAYABLE 
+?PR?ResetBus?ATAOE   SEGMENT CODE 
+?PR?WaitBusy?ATAOE   SEGMENT CODE 
+?XD?WaitBusy?ATAOE   SEGMENT XDATA OVERLAYABLE 
+?PR?_WriteReg8?ATAOE SEGMENT CODE 
+?XD?_WriteReg8?ATAOE SEGMENT XDATA OVERLAYABLE 
+?PR?DumpRegs?ATAOE   SEGMENT CODE 
+?XD?DumpRegs?ATAOE   SEGMENT XDATA OVERLAYABLE 
+?PR?_ATAHandler?ATAOE                    SEGMENT CODE 
+?XD?_ATAHandler?ATAOE                    SEGMENT XDATA OVERLAYABLE 
+?PR?init_ata_hardware?ATAOE              SEGMENT CODE 
+?PR?init_ata?ATAOE   SEGMENT CODE 
+?PR?_ataoe?ATAOE     SEGMENT CODE 
+?XD?_ataoe?ATAOE     SEGMENT XDATA OVERLAYABLE 
+?CO?ATAOE            SEGMENT CODE 
+?C_INITSEG           SEGMENT CODE 
+	EXTRN	CODE (_getSn_SR)
+	EXTRN	CODE (_socket)
+	EXTRN	XDATA (?_socket?BYTE)
+	EXTRN	CODE (_sendto)
+	EXTRN	XDATA (?_sendto?BYTE)
+	EXTRN	CODE (_printf)
+	EXTRN	XDATA (?_printf?BYTE)
+	EXTRN	CODE (_close)
+	EXTRN	CODE (_wait_1ms)
+	EXTRN	CODE (_htons)
+	EXTRN	CODE (_wait_1us)
+	EXTRN	CODE (_getSn_RX_RSR)
+	EXTRN	CODE (_recvfrom)
+	EXTRN	XDATA (?_recvfrom?BYTE)
+	EXTRN	CODE (?C?CLDPTR)
+	EXTRN	CODE (?C?CLDOPTR)
+	EXTRN	CODE (?C?ILDOPTR)
+	EXTRN	CODE (?C?LSTKXDATA)
+	EXTRN	CODE (?C?LLDOPTR)
+	EXTRN	CODE (?C?LSTXDATA)
+	EXTRN	CODE (?C?IILDX)
+	EXTRN	CODE (?C?ULSHR)
+	EXTRN	CODE (?C?ILDIX)
+	EXTRN	CODE (?C?CSTPTR)
+	PUBLIC	ConfigResp
+	PUBLIC	_ataoe
+	PUBLIC	init_ata
+	PUBLIC	init_ata_hardware
+
+	XSEG  AT  07000H
+           aATA:   DS   1060
+
+	RSEG  ?XD?_ataoe?ATAOE
+?_ataoe?BYTE:
+         s?1467:   DS   1
+	ORG  1
+       mac?1468:   DS   3
+	ORG  4
+      rlen?1469:   DS   2
+	ORG  6
+mac_destport?1470:   DS   2
+	ORG  8
+       len?1471:   DS   2
+	ORG  10
+mac_destip?1472:   DS   4
+
+	RSEG  ?XD?_ATAHandler?ATAOE
+?_ATAHandler?BYTE:
+         s?1157:   DS   1
+	ORG  1
+   src_mac?1158:   DS   3
+	ORG  4
+  byte_cnt?1159:   DS   2
+	ORG  6
+   blk_cnt?1160:   DS   1
+	ORG  7
+    blocks?1161:   DS   1
+	ORG  8
+         m?1162:   DS   4
+	ORG  12
+       tip?1163:   DS   4
+	ORG  16
+         i?1164:   DS   1
+	ORG  17
+         j?1165:   DS   1
+	ORG  18
+         p?1166:   DS   3
+
+	RSEG  ?XD?DumpRegs?ATAOE
+?DumpRegs?BYTE:
+         i?1056:   DS   1
+
+	RSEG  ?XD?WaitBusy?ATAOE
+?WaitBusy?BYTE:
+          i?852:   DS   2
+	ORG  2
+          j?853:   DS   1
+
+	RSEG  ?XD?_DumpATAConfig?ATAOE
+?_DumpATAConfig?BYTE:
+          p?242:   DS   3
+
+	RSEG  ?XD?_DumpAtaHdr?ATAOE
+?_DumpAtaHdr?BYTE:
+          p?040:   DS   3
+
+	RSEG  ?XD?_ReadReg8?ATAOE
+?_ReadReg8?BYTE:
+        reg?650:   DS   1
+
+	RSEG  ?XD?_WriteReg8?ATAOE
+?_WriteReg8?BYTE:
+        reg?954:   DS   1
+	ORG  1
+          x?955:   DS   1
+
+	RSEG  ?XD?_SendConfigAck?ATAOE
+?_SendConfigAck?BYTE:
+          s?545:   DS   1
+	ORG  1
+    src_mac?546:   DS   3
+	ORG  4
+        req?547:   DS   3
+	ORG  7
+          i?548:   DS   1
+	ORG  8
+        tip?549:   DS   4
+
+	RSEG  ?XD?_DumpATAIssue?ATAOE
+?_DumpATAIssue?BYTE:
+          p?141:   DS   3
+
+	RSEG  ?XD?ATAOE
+          t?651:   DS   1
+          RMASK:   DS   16
+          SMASK:   DS   16
+          RSIZE:   DS   16
+          SSIZE:   DS   16
+       I_STATUS:   DS   8
+     ide_status:   DS   1
+RBUFBASEADDRESS:   DS   16
+SBUFBASEADDRESS:   DS   16
+     ConfigResp:   DS   33
+
+	RSEG  ?CO?ATAOE
+?SC_0:
+	DB  'D' ,'E' ,'S' ,'T' ,' ' ,'%' ,'0' ,'2' ,'X' ,':' 
+	DB  '%' ,'0' ,'2' ,'X' ,':' ,'%' ,'0' ,'2' ,'X' ,':' 
+	DB  '%' ,'0' ,'2' ,'X' ,':' ,'%' ,'0' ,'2' ,'X' ,':' 
+	DB  '%' ,'0' ,'2' ,'X' ,00DH,00AH,000H
+
+?SC_37:
+	DB  'S' ,'R' ,'C' ,' ' ,'%' ,'0' ,'2' ,'X' ,':' ,'%' 
+	DB  '0' ,'2' ,'X' ,':' ,'%' ,'0' ,'2' ,'X' ,':' ,'%' 
+	DB  '0' ,'2' ,'X' ,':' ,'%' ,'0' ,'2' ,'X' ,':' ,'%' 
+	DB  '0' ,'2' ,'X' ,00DH,00AH,000H
+
+?SC_73:
+	DB  'F' ,'L' ,'A' ,'G' ,'S' ,' ' ,'%' ,'x' ,00DH,00AH
+	DB  'M' ,'A' ,'J' ,'O' ,'R' ,' ' ,'%' ,'u' ,00DH,00AH
+	DB  'M' ,'I' ,'N' ,'O' ,'R' ,' ' ,'%' ,'u' ,00DH,00AH
+	DB  'C' ,'M' ,'D' ,' ' ,'%' ,'x' ,00DH,00AH,000H
+
+?SC_112:
+	DB  'A' ,'T' ,'A' ,' ' ,'C' ,'M' ,'D' ,' ' ,'%' ,'X' 
+	DB  00DH,00AH,000H
+
+?SC_125:
+	DB  'S' ,'E' ,'C' ,'T' ,'O' ,'R' ,'S' ,' ' ,'%' ,'u' 
+	DB  00DH,00AH,000H
+
+?SC_138:
+	DB  'L' ,'B' ,'A' ,' ' ,'%' ,'0' ,'2' ,'X' ,':' ,'%' 
+	DB  '0' ,'2' ,'X' ,':' ,'%' ,'0' ,'2' ,'X' ,':' ,'%' 
+	DB  '0' ,'2' ,'X' ,':' ,'%' ,'0' ,'2' ,'X' ,':' ,'%' 
+	DB  '0' ,'2' ,'X' ,00DH,00AH,000H
+
+?SC_174:
+	DB  'M' ,'a' ,'x' ,' ' ,'Q' ,'u' ,'e' ,'u' ,'e' ,' ' 
+	DB  'L' ,'e' ,'n' ,'g' ,'t' ,'h' ,' ' ,'%' ,'u' ,00DH
+	DB  00AH,000H
+
+?SC_196:
+	DB  'F' ,'i' ,'r' ,'m' ,'w' ,'a' ,'r' ,'e' ,' ' ,'V' 
+	DB  'e' ,'r' ,'s' ,'i' ,'o' ,'n' ,' ' ,'%' ,'u' ,00DH
+	DB  00AH,000H
+
+?SC_218:
+	DB  'M' ,'a' ,'x' ,' ' ,'S' ,'e' ,'c' ,'t' ,'o' ,'r' 
+	DB  's' ,' ' ,'%' ,'u' ,00DH,00AH,000H
+
+?SC_235:
+	DB  'A' ,'O' ,'E' ,' ' ,'P' ,'r' ,'o' ,'t' ,'o' ,'c' 
+	DB  'o' ,'l' ,' ' ,'%' ,'u' ,00AH,00DH,000H
+
+?SC_253:
+	DB  'C' ,'C' ,'M' ,'D' ,' ' ,'%' ,'u' ,00DH,00AH,000H
+
+?SC_263:
+	DB  'S' ,'t' ,'r' ,'i' ,'n' ,'g' ,' ' ,'l' ,'e' ,'n' 
+	DB  'g' ,'t' ,'h' ,' ' ,'%' ,'u' ,00DH,00AH,000H
+
+?SC_282:
+	DB  'R' ,'e' ,'g' ,'s' ,':' ,' ' ,000H
+
+?SC_289:
+	DB  '%' ,'0' ,'2' ,'x' ,' ' ,000H
+
+?SC_295:
+	DB  00DH,00AH,000H
+
+
+	RSEG  ?C_INITSEG
+	DB	041H
+	DW	ide_status
+	DB	000H
+
+; /*
+; 
+; Circuit Cellar WizNet Contest 2010
+; Project 3035
+; Budget Network Attached Storage Unit
+; ATAOE driver
+; 
+;  */
+; 
+; #include "ataoe.h"
+; #include "socket.h" 		// W7100A driver file
+; #include "w7100.h"
+; #include "Wizmemcpy.h"
+; #include "TCPIPcore.h"
+; #include "delay.h"
+; #include "sockutil.h"
+; #include <stdio.h>
+;   
+; #define MY_MAJOR 1
+; #define MY_MINOR 0
+; 
+; #define AOE_TYPE 0x88a2
+; 
+; #define AOE_CMD_ATA 0
+; #define AOE_CMD_CONFIG 1
+; #define AOE_CMD_MAC_MASK 2
+; #define AOE_CMD_RESERVE_RELEASE 3
+; 
+; #define ATA_CMD_PIO_EREAD		0x24
+; #define ATA_CMD_PIO_READ		0x20
+; #define ATA_CMD_PIO_WRITE		0x30
+; #define ATA_CMD_ID_ATA			0xEC
+; 
+; ///
+; ///IDE status register bits
+; ///
+; #define IDE_BSY		(1<<7)
+; #define IDE_DRDY	(1<<6)
+; #define IDE_DF      (1<<5)
+; #define IDE_DRQ		(1<<3)
+; #define IDE_ERR		(1<<0)
+; 
+; #define LBA_SIZE					4
+; #define AOE_TAG_SIZE				4
+; 
+; static uint8 xdata ide_status=0;
+; 
+; static AtaIssue xdata aATA _at_ 0x007000;
+; 
+; 
+; static void DumpAtaHdr(AtaHdr *p)
+
+	RSEG  ?PR?_DumpAtaHdr?ATAOE
+L?0066:
+	USING	0
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+_DumpAtaHdr:
+	USING	0
+			; SOURCE LINE # 51
+	MOV  	DPTR,#p?040
+	MOV  	A,R3
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R2
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R1
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 52
+;   printf("DEST %02X:%02X:%02X:%02X:%02X:%02X\r\n", 
+;    				(int)p->dst_mac[0],(int)p->dst_mac[1],(int)p->dst_mac[2],(int)p->dst_mac[3],(int)p->dst_mac[4],(int)p->dst_mac[5]);
+			; SOURCE LINE # 54
+	MOV  	DPTR,#p?040
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	LCALL	?C?CLDPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#01H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+05H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#02H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+07H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#03H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+09H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#04H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+0BH
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#05H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+0DH
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_0)
+	MOV  	R1,#LOW (?SC_0)
+	LCALL	_printf
+;  
+;   printf("SRC %02X:%02X:%02X:%02X:%02X:%02X\r\n", 
+;    				(int)p->src_mac[0],(int)p->src_mac[1],(int)p->src_mac[2],(int)p->src_mac[3],(int)p->src_mac[4],(int)p->src_mac[5]);
+			; SOURCE LINE # 57
+	MOV  	DPTR,#p?040
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#06H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#07H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+05H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#08H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+07H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#09H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+09H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#0AH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+0BH
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#0BH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+0DH
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_37)
+	MOV  	R1,#LOW (?SC_37)
+	LCALL	_printf
+;    
+; 	printf("FLAGS %x\r\nMAJOR %u\r\nMINOR %u\r\nCMD %x\r\n", 
+; 			(int)p->flags,htons(p->major),(int)p->minor,(int)p->cmd);
+			; SOURCE LINE # 60
+	MOV  	DPTR,#p?040
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#010H
+	LCALL	?C?ILDOPTR
+	MOV  	R7,A
+	MOV  	R6,B
+	LCALL	_htons
+	MOV  	DPTR,#?_printf?BYTE+05H
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#p?040
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#0EH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#012H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+07H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#013H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+09H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_73)
+	MOV  	R1,#LOW (?SC_73)
+	LJMP 	_printf
+; END OF _DumpAtaHdr
+
+; 
+; }
+; 
+; static void DumpATAIssue(AtaIssue *p)
+
+	RSEG  ?PR?_DumpATAIssue?ATAOE
+_DumpATAIssue:
+	USING	0
+			; SOURCE LINE # 64
+	MOV  	DPTR,#p?141
+	MOV  	A,R3
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R2
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R1
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 65
+;    	   DumpAtaHdr(&p->header);
+			; SOURCE LINE # 66
+	MOV  	DPTR,#p?141
+	LCALL	L?0066
+;   
+; 	    printf("ATA CMD %X\r\n", (int)p->acmd);
+			; SOURCE LINE # 68
+	MOV  	DPTR,#p?141
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#01BH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_112)
+	MOV  	R1,#LOW (?SC_112)
+	LCALL	_printf
+; 		printf("SECTORS %u\r\n", (int)p->sectors);
+			; SOURCE LINE # 69
+	MOV  	DPTR,#p?141
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#01AH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_125)
+	MOV  	R1,#LOW (?SC_125)
+	LCALL	_printf
+; 		printf("LBA %02X:%02X:%02X:%02X:%02X:%02X\r\n",
+; 				(int)p->lba0,(int)p->lba1,(int)p->lba2,(int)p->lba3,(int)p->lba4,(int)p->lba5);
+			; SOURCE LINE # 71
+	MOV  	DPTR,#p?141
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#01CH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#01DH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+05H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#01EH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+07H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#01FH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+09H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#020H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+0BH
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#021H
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+0DH
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_138)
+	MOV  	R1,#LOW (?SC_138)
+	LJMP 	_printf
+; END OF _DumpATAIssue
+
+; 
+; 
+; }
+; 
+; static void DumpATAConfig(AtaConfig *p)
+
+	RSEG  ?PR?_DumpATAConfig?ATAOE
+_DumpATAConfig:
+	USING	0
+			; SOURCE LINE # 76
+	MOV  	DPTR,#p?242
+	MOV  	A,R3
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R2
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R1
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 77
+;    	   DumpAtaHdr(&p->header);
+			; SOURCE LINE # 78
+	MOV  	DPTR,#p?242
+	LCALL	L?0066
+; 
+; 	   printf("Max Queue Length %u\r\n", htons(p->buffer_count));
+			; SOURCE LINE # 80
+	MOV  	DPTR,#p?242
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#018H
+	LCALL	?C?ILDOPTR
+	MOV  	R7,A
+	MOV  	R6,B
+	LCALL	_htons
+	MOV  	DPTR,#?_printf?BYTE+03H
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_174)
+	MOV  	R1,#LOW (?SC_174)
+	LCALL	_printf
+; 	   printf("Firmware Version %u\r\n", htons(p->firmware_version));
+			; SOURCE LINE # 81
+	MOV  	DPTR,#p?242
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#01AH
+	LCALL	?C?ILDOPTR
+	MOV  	R7,A
+	MOV  	R6,B
+	LCALL	_htons
+	MOV  	DPTR,#?_printf?BYTE+03H
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_196)
+	MOV  	R1,#LOW (?SC_196)
+	LCALL	_printf
+;  	   printf("Max Sectors %u\r\n",(int)p->sectors);
+			; SOURCE LINE # 82
+	MOV  	DPTR,#p?242
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#01CH
+	LCALL	?C?CLDOPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_218)
+	MOV  	R1,#LOW (?SC_218)
+	LCALL	_printf
+; 	   printf("AOE Protocol %u\n\r",(int)((p->aoe_ccmd>>4)&15));
+			; SOURCE LINE # 83
+	MOV  	DPTR,#p?242
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#01DH
+	LCALL	?C?CLDOPTR
+	SWAP 	A
+	ANL  	A,#0FH
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_235)
+	MOV  	R1,#LOW (?SC_235)
+	LCALL	_printf
+; 	   printf("CCMD %u\r\n",(int)(p->aoe_ccmd&15));
+			; SOURCE LINE # 84
+	MOV  	DPTR,#p?242
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#01DH
+	LCALL	?C?CLDOPTR
+	ANL  	A,#0FH
+	MOV  	R7,A
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_253)
+	MOV  	R1,#LOW (?SC_253)
+	LCALL	_printf
+; 	   printf("String length %u\r\n",htons(p->length));
+			; SOURCE LINE # 85
+	MOV  	DPTR,#p?242
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#01EH
+	LCALL	?C?ILDOPTR
+	MOV  	R7,A
+	MOV  	R6,B
+	LCALL	_htons
+	MOV  	DPTR,#?_printf?BYTE+03H
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_263)
+	MOV  	R1,#LOW (?SC_263)
+	LJMP 	_printf
+; END OF _DumpATAConfig
+
+; 
+; 
+; }
+; 
+; static void DumpATAMacMask( AtaMACMask *p)
+
+	RSEG  ?PR?_DumpATAMacMask?ATAOE
+_DumpATAMacMask:
+	USING	0
+			; SOURCE LINE # 90
+;---- Variable 'p?343' assigned to Register 'R1/R2/R3' ----
+; {
+			; SOURCE LINE # 91
+;    	   DumpAtaHdr(&p->header);
+			; SOURCE LINE # 92
+	LJMP 	_DumpAtaHdr
+; END OF _DumpATAMacMask
+
+;  
+; }
+; 
+; static void DumpATAReserveRelease( AtaReserveRelease *p)
+
+	RSEG  ?PR?_DumpATAReserveRelease?ATAOE
+_DumpATAReserveRelease:
+	USING	0
+			; SOURCE LINE # 96
+;---- Variable 'p?444' assigned to Register 'R1/R2/R3' ----
+; {
+			; SOURCE LINE # 97
+;    	   DumpAtaHdr(&p->header);
+			; SOURCE LINE # 98
+	LJMP 	_DumpAtaHdr
+; END OF _DumpATAReserveRelease
+
+;  
+; }
+; 
+; AtaConfig xdata ConfigResp;
+; 
+; 
+; static uint8 SendConfigAck(SOCKET s,uint8 *src_mac,AtaConfig *req)
+
+	RSEG  ?PR?_SendConfigAck?ATAOE
+_SendConfigAck:
+	USING	0
+			; SOURCE LINE # 105
+	MOV  	DPTR,#s?545
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R3
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R2
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R1
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 106
+; 	uint8 i;
+;    	uint32 xdata tip = 0xFFFFFFFF;
+			; SOURCE LINE # 108
+	MOV  	DPTR,#tip?549
+	LCALL	?C?LSTKXDATA
+	DB   	0FFH
+	DB   	0FFH
+	DB   	0FFH
+	DB   	0FFH
+; 
+; 	DumpATAConfig(req);
+			; SOURCE LINE # 110
+	MOV  	DPTR,#req?547
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	LCALL	_DumpATAConfig
+; 
+; 	ConfigResp.header.msg_type = AOE_TYPE;
+			; SOURCE LINE # 112
+	MOV  	DPTR,#ConfigResp+0CH
+	MOV  	A,#088H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#0A2H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.flags = 0x18;
+			; SOURCE LINE # 113
+	INC  	DPTR
+	MOV  	A,#018H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.error = 0; 
+			; SOURCE LINE # 114
+	CLR  	A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+;     ConfigResp.header.major = MY_MAJOR;
+			; SOURCE LINE # 115
+	INC  	DPTR
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.minor = MY_MINOR;
+			; SOURCE LINE # 116
+	CLR  	A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.cmd = AOE_CMD_CONFIG;
+			; SOURCE LINE # 117
+	INC  	DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+; 
+;   	ConfigResp.header.dst_mac[0] = aATA.header.src_mac[0];
+			; SOURCE LINE # 119
+	MOV  	DPTR,#aATA+06H
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#ConfigResp
+	MOVX 	@DPTR,A
+;   	ConfigResp.header.dst_mac[1] = aATA.header.src_mac[1];
+			; SOURCE LINE # 120
+	MOV  	DPTR,#aATA+07H
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#ConfigResp+01H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.dst_mac[2] = aATA.header.src_mac[2];
+			; SOURCE LINE # 121
+	MOV  	DPTR,#aATA+08H
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#ConfigResp+02H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.dst_mac[3] = aATA.header.src_mac[3];
+			; SOURCE LINE # 122
+	MOV  	DPTR,#aATA+09H
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#ConfigResp+03H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.dst_mac[4] = aATA.header.src_mac[4];
+			; SOURCE LINE # 123
+	MOV  	DPTR,#aATA+0AH
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#ConfigResp+04H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.dst_mac[5] = aATA.header.src_mac[5];
+			; SOURCE LINE # 124
+	MOV  	DPTR,#aATA+0BH
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#ConfigResp+05H
+	MOVX 	@DPTR,A
+; 
+; 	ConfigResp.header.src_mac[0] = src_mac[0];
+			; SOURCE LINE # 126
+	MOV  	DPTR,#src_mac?546
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	LCALL	?C?CLDPTR
+	MOV  	DPTR,#ConfigResp+06H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.src_mac[1] = src_mac[1];
+			; SOURCE LINE # 127
+	MOV  	DPTR,#01H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#ConfigResp+07H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.src_mac[2] = src_mac[2];
+			; SOURCE LINE # 128
+	MOV  	DPTR,#02H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#ConfigResp+08H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.src_mac[3] = src_mac[3];
+			; SOURCE LINE # 129
+	MOV  	DPTR,#03H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#ConfigResp+09H
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.src_mac[4] = src_mac[4];
+			; SOURCE LINE # 130
+	MOV  	DPTR,#04H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#ConfigResp+0AH
+	MOVX 	@DPTR,A
+; 	ConfigResp.header.src_mac[5] = src_mac[5];
+			; SOURCE LINE # 131
+	MOV  	DPTR,#05H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#ConfigResp+0BH
+	MOVX 	@DPTR,A
+; 
+; //	wizmemcpy((unsigned long)&aATA.header.src_mac,(unsigned long)&ConfigResp.header.dst_mac, ETHER_ADDR_LEN);
+; //	wizmemcpy((unsigned long)src_mac,(unsigned long)&ConfigResp.header.src_mac, ETHER_ADDR_LEN);
+; 
+; 	ConfigResp.header.tag = req->header.tag;
+			; SOURCE LINE # 136
+	MOV  	DPTR,#req?547
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	MOV  	DPTR,#014H
+	LCALL	?C?LLDOPTR
+	MOV  	DPTR,#ConfigResp+014H
+	LCALL	?C?LSTXDATA
+; 
+; 	// Maximum # of queued commands	
+; 	ConfigResp.buffer_count = htons(1);
+			; SOURCE LINE # 139
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_htons
+	MOV  	DPTR,#ConfigResp+018H
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; 	ConfigResp.firmware_version= 0;
+			; SOURCE LINE # 140
+	CLR  	A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+; 
+; 	ConfigResp.sectors=0;	// actually means 2 sectors max
+			; SOURCE LINE # 142
+	INC  	DPTR
+	MOVX 	@DPTR,A
+; 	ConfigResp.aoe_ccmd=0x10;
+			; SOURCE LINE # 143
+	INC  	DPTR
+	MOV  	A,#010H
+	MOVX 	@DPTR,A
+; 	ConfigResp.length=0; 	// no config string response
+			; SOURCE LINE # 144
+	CLR  	A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+; 
+; 	if( sendto(s,(uint8*)&ConfigResp,sizeof(ConfigResp),(uint8 *)&tip,3000) ==0)
+			; SOURCE LINE # 146
+	MOV  	DPTR,#s?545
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_sendto?BYTE+04H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#021H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#01H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#HIGH (tip?549)
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#LOW (tip?549)
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#0BH
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#0B8H
+	MOVX 	@DPTR,A
+	MOV  	R3,#01H
+	MOV  	R2,#HIGH (ConfigResp)
+	MOV  	R1,#LOW (ConfigResp)
+	LCALL	_sendto
+	MOV  	A,R7
+	ORL  	A,R6
+	JNZ  	?C0006
+; 		return 0;
+			; SOURCE LINE # 147
+	MOV  	R7,A
+	RET  	
+?C0006:
+; 	else
+; 		return 1;
+			; SOURCE LINE # 149
+	MOV  	R7,#01H
+; }
+			; SOURCE LINE # 150
+?C0007:
+	RET  	
+; END OF _SendConfigAck
+
+; 
+; 	
+; static uint8 ReadReg8(uint8 reg)
+
+	RSEG  ?PR?_ReadReg8?ATAOE
+_ReadReg8:
+	USING	0
+			; SOURCE LINE # 153
+	MOV  	DPTR,#reg?650
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 154
+; 	static uint8 t;
+; 	  
+; 	reg &= 7;
+			; SOURCE LINE # 157
+	ANL  	A,#07H
+	MOVX 	@DPTR,A
+; 
+; 	// Load address
+; 	P1 = reg | (IDE_RESET_MASK|IDE_RD_MASK|IDE_WR_MASK|IDE_CS_MASK|IDE_DIR_MASK) ;
+			; SOURCE LINE # 160
+	ORL  	A,#0F8H
+	MOV  	P1,A
+; 	
+; 	wait_1us(1);
+			; SOURCE LINE # 162
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 	// CS=0
+; 	P1 = reg | (IDE_RESET_MASK|IDE_RD_MASK|IDE_WR_MASK|IDE_DIR_MASK) ;
+			; SOURCE LINE # 164
+	MOV  	DPTR,#reg?650
+	MOVX 	A,@DPTR
+	ORL  	A,#0F0H
+	MOV  	P1,A
+; 	 	
+; 		
+; 	wait_1us(1);
+			; SOURCE LINE # 167
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; 	// This seems to set the I/O pin to input, must be open collector with pullup
+; 	IDE_DATA_MSB = 0xFF;
+			; SOURCE LINE # 170
+	MOV  	P3,#0FFH
+; 	IDE_DATA_LSB = 0xFF;
+			; SOURCE LINE # 171
+	MOV  	P2,#0FFH
+; 
+; 	// DIR=0 RD=0 CS=0
+; 	P1 = reg | (IDE_RESET_MASK|IDE_WR_MASK) ;
+			; SOURCE LINE # 174
+	MOV  	DPTR,#reg?650
+	MOVX 	A,@DPTR
+	ORL  	A,#030H
+	MOV  	P1,A
+; 	
+; 	// 1.25us 
+; 
+; #pragma ASM
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 
+	  
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; #pragma ENDASM
+; 	
+; 	wait_1us(1);
+			; SOURCE LINE # 202
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; 	t = IDE_DATA_LSB;
+			; SOURCE LINE # 204
+	MOV  	DPTR,#t?651
+	MOV  	A,P2
+	MOVX 	@DPTR,A
+; 				
+; 	wait_1us(1);
+			; SOURCE LINE # 206
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; 	// DIR=0 RD=1 CS=0
+; 	P1 = reg | IDE_RESET_MASK|IDE_RD_MASK|IDE_WR_MASK ;
+			; SOURCE LINE # 209
+	MOV  	DPTR,#reg?650
+	MOVX 	A,@DPTR
+	ORL  	A,#070H
+	MOV  	P1,A
+; 
+; 	wait_1us(1);
+			; SOURCE LINE # 211
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; 	// DIR=1 RD=1 CS=1
+; 	P1 = reg | IDE_RESET_MASK|IDE_RD_MASK|IDE_WR_MASK|IDE_CS_MASK|IDE_DIR_MASK ;
+			; SOURCE LINE # 214
+	MOV  	DPTR,#reg?650
+	MOVX 	A,@DPTR
+	ORL  	A,#0F8H
+	MOV  	P1,A
+; 
+; 	wait_1us(1);
+			; SOURCE LINE # 216
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 		
+; 	return	t;
+			; SOURCE LINE # 218
+	MOV  	DPTR,#t?651
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+; }
+			; SOURCE LINE # 219
+?C0009:
+	RET  	
+; END OF _ReadReg8
+
+; 		
+; static void ResetBus(void)
+
+	RSEG  ?PR?ResetBus?ATAOE
+ResetBus:
+	USING	0
+			; SOURCE LINE # 221
+; {
+			; SOURCE LINE # 222
+; 
+; 	// DIR=1 RD=1 CS=1 WR=1 RESET=0
+; 	P1 = (IDE_RD_MASK|IDE_WR_MASK|IDE_CS_MASK|IDE_DIR_MASK) ;
+			; SOURCE LINE # 225
+	MOV  	P1,#0E8H
+; 
+; 	wait_1us(100);
+			; SOURCE LINE # 227
+	MOV  	R7,#064H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 			  
+; 	// DIR=1 RD=1 CS=1 WR=1 RESET=1
+; 	P1 = (IDE_RESET_MASK|IDE_RD_MASK|IDE_WR_MASK|IDE_CS_MASK|IDE_DIR_MASK) ;
+			; SOURCE LINE # 230
+	MOV  	P1,#0F8H
+; 
+; 	wait_1ms(4);
+			; SOURCE LINE # 232
+	MOV  	R7,#04H
+	MOV  	R6,#00H
+	LJMP 	_wait_1ms
+; END OF ResetBus
+
+; 
+; }
+; 
+; static uint8 WaitBusy(void)
+
+	RSEG  ?PR?WaitBusy?ATAOE
+WaitBusy:
+	USING	0
+			; SOURCE LINE # 236
+; {
+			; SOURCE LINE # 237
+; 	uint16 i=0;
+			; SOURCE LINE # 238
+	CLR  	A
+	MOV  	DPTR,#i?852
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+; 	uint8 j=0;
+			; SOURCE LINE # 239
+	INC  	DPTR
+	MOVX 	@DPTR,A
+; 
+; 	do
+; 	{
+			; SOURCE LINE # 242
+?C0016:
+; 
+; 		do
+; 		{
+			; SOURCE LINE # 245
+; 			ide_status = ReadReg8(7);
+			; SOURCE LINE # 246
+	MOV  	R7,#07H
+	LCALL	_ReadReg8
+	MOV  	DPTR,#ide_status
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; 		
+; 			if(!(ide_status & IDE_BSY))
+			; SOURCE LINE # 248
+	JB   	ACC.7,?C0014
+; 				return 1;
+			; SOURCE LINE # 249
+	MOV  	R7,#01H
+	RET  	
+; 
+; 		} while(++i!=0); 
+			; SOURCE LINE # 251
+?C0014:
+	MOV  	DPTR,#i?852
+	CLR  	A
+	MOV  	B,#01H
+	LCALL	?C?IILDX
+	ORL  	A,B
+	JNZ  	?C0016
+; 
+; 	} while(++j != 10);
+			; SOURCE LINE # 253
+	MOV  	DPTR,#j?853
+	MOVX 	A,@DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+	CJNE 	A,#0AH,?C0016
+; 
+;    	return 0;
+			; SOURCE LINE # 255
+	MOV  	R7,#00H
+; }
+			; SOURCE LINE # 256
+?C0018:
+	RET  	
+; END OF WaitBusy
+
+; 
+; static void WriteReg8(uint8 reg,uint8 x)
+
+	RSEG  ?PR?_WriteReg8?ATAOE
+L?0065:
+	USING	0
+	MOV  	DPTR,#aATA+01FH
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+_WriteReg8:
+	USING	0
+			; SOURCE LINE # 258
+	MOV  	DPTR,#x?955
+	MOV  	A,R5
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#reg?954
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 259
+; 	reg &= 7;
+			; SOURCE LINE # 260
+	ANL  	A,#07H
+	MOVX 	@DPTR,A
+; 
+;    	// Load addr
+; 	P1 = reg | (IDE_RESET_MASK|IDE_RD_MASK|IDE_WR_MASK|IDE_CS_MASK|IDE_DIR_MASK) ;
+			; SOURCE LINE # 263
+	ORL  	A,#0F8H
+	MOV  	P1,A
+; 			
+; 	wait_1us(1);
+			; SOURCE LINE # 265
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+;   	// CS=0	DIR=1
+; 	P1 = reg | (IDE_RESET_MASK|IDE_RD_MASK|IDE_WR_MASK|IDE_DIR_MASK) ;
+			; SOURCE LINE # 268
+	MOV  	DPTR,#reg?954
+	MOVX 	A,@DPTR
+	ORL  	A,#0F0H
+	MOV  	P1,A
+; 	 		 
+; 	wait_1us(1);
+			; SOURCE LINE # 270
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; 	IDE_DATA_LSB = x;
+			; SOURCE LINE # 272
+	MOV  	DPTR,#x?955
+	MOVX 	A,@DPTR
+	MOV  	P2,A
+; 	IDE_DATA_MSB = 0xFF;
+			; SOURCE LINE # 273
+	MOV  	P3,#0FFH
+;  			 
+; 	wait_1us(2);
+			; SOURCE LINE # 275
+	MOV  	R7,#02H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; #pragma ASM
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; #pragma ENDASM
+; 			
+;   	// CS=0 WR=0 DIR=1
+; 	P1 = reg | (IDE_RESET_MASK|IDE_RD_MASK|IDE_DIR_MASK) ;
+			; SOURCE LINE # 286
+	MOV  	DPTR,#reg?954
+	MOVX 	A,@DPTR
+	ORL  	A,#0D0H
+	MOV  	P1,A
+; 	 	
+; 	wait_1us(1);
+			; SOURCE LINE # 288
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; #pragma ASM
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; #pragma ENDASM
+; 
+; 	// WR=1 CS=0 DIR=1
+; 	P1 = reg | (IDE_RESET_MASK|IDE_RD_MASK|IDE_WR_MASK|IDE_DIR_MASK) ;
+			; SOURCE LINE # 304
+	MOV  	DPTR,#reg?954
+	MOVX 	A,@DPTR
+	ORL  	A,#0F0H
+	MOV  	P1,A
+; 	  	   	   	 
+; 	wait_1us(1);
+			; SOURCE LINE # 306
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; 	IDE_DATA_LSB = 0xFF;
+			; SOURCE LINE # 308
+	MOV  	P2,#0FFH
+; 	IDE_DATA_MSB = 0xFF;
+			; SOURCE LINE # 309
+	MOV  	P3,#0FFH
+; 				 
+; 	wait_1us(1);
+			; SOURCE LINE # 311
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; 	// WR=1 CS=1 DIR=1
+; 	P1 = reg | IDE_RESET_MASK|IDE_RD_MASK|IDE_WR_MASK|IDE_CS_MASK|IDE_DIR_MASK ;
+			; SOURCE LINE # 314
+	MOV  	DPTR,#reg?954
+	MOVX 	A,@DPTR
+	ORL  	A,#0F8H
+	MOV  	P1,A
+; 	 
+; 	wait_1us(1);
+			; SOURCE LINE # 316
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LJMP 	_wait_1us
+; END OF _WriteReg8
+
+; }
+; 
+; static void DumpRegs(void)
+
+	RSEG  ?PR?DumpRegs?ATAOE
+DumpRegs:
+	USING	0
+			; SOURCE LINE # 319
+; {
+			; SOURCE LINE # 320
+; 	uint8 i;
+; 
+; 	printf("Regs: ");
+			; SOURCE LINE # 323
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_282)
+	MOV  	R1,#LOW (?SC_282)
+	LCALL	_printf
+; 
+; 	for(i=1;i<8;i++)
+			; SOURCE LINE # 325
+	MOV  	DPTR,#i?1056
+	MOV  	A,#01H
+	MOVX 	@DPTR,A
+?C0020:
+	MOV  	DPTR,#i?1056
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	CLR  	C
+	SUBB 	A,#08H
+	JNC  	?C0021
+; 	{
+			; SOURCE LINE # 326
+; 		printf("%02x ", (int)ReadReg8(i));
+			; SOURCE LINE # 327
+	LCALL	_ReadReg8
+	MOV  	DPTR,#?_printf?BYTE+03H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_289)
+	MOV  	R1,#LOW (?SC_289)
+	LCALL	_printf
+; 	}
+			; SOURCE LINE # 328
+	MOV  	DPTR,#i?1056
+	MOVX 	A,@DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+	SJMP 	?C0020
+?C0021:
+; 
+; 	printf("\r\n");
+			; SOURCE LINE # 330
+	MOV  	R3,#0FFH
+	MOV  	R2,#HIGH (?SC_295)
+	MOV  	R1,#LOW (?SC_295)
+	LJMP 	_printf
+; END OF DumpRegs
+
+; 
+; }
+; 
+; // pointer dereferencing
+; 
+; static uint8 ATAHandler(SOCKET s,uint8 *src_mac)
+
+	RSEG  ?PR?_ATAHandler?ATAOE
+_ATAHandler:
+	USING	0
+			; SOURCE LINE # 336
+	MOV  	DPTR,#s?1157
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R3
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R2
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R1
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 337
+; 	uint16 byte_cnt;
+; 	uint8  blk_cnt;
+; 	uint8 blocks;
+; 	unsigned long m;
+;   	uint32 xdata tip = 0xFFFFFFF;
+			; SOURCE LINE # 342
+	MOV  	DPTR,#tip?1163
+	LCALL	?C?LSTKXDATA
+	DB   	0FH
+	DB   	0FFH
+	DB   	0FFH
+	DB   	0FFH
+; 	uint8 i,j,*p;
+; 
+; //	DumpATAIssue(&aATA);
+; 
+; 	// Wait for interface to be free
+; 	WaitBusy();
+			; SOURCE LINE # 348
+	LCALL	WaitBusy
+; 		
+; //	DumpRegs();
+; 
+; 	// extended or normal access?
+; 	if(aATA.aflag & 0x40)
+			; SOURCE LINE # 353
+	MOV  	DPTR,#aATA+018H
+	MOVX 	A,@DPTR
+	JNB  	ACC.6,?C0024
+; 	{
+			; SOURCE LINE # 354
+; 	//	printf("Extended\r\n");
+; 
+; 		WriteReg8(6,(aATA.aflag & 0x50) | 0xa0); 		
+			; SOURCE LINE # 357
+	ANL  	A,#050H
+	ORL  	A,#0A0H
+	MOV  	R5,A
+	MOV  	R7,#06H
+	LCALL	_WriteReg8
+;   
+;   		// Wait for device to respond
+; 		WaitBusy();
+			; SOURCE LINE # 360
+	LCALL	WaitBusy
+; 				
+; 		WriteReg8(3, aATA.lba3);  	// 	LBA low
+			; SOURCE LINE # 362
+	MOV  	R7,#03H
+	LCALL	L?0065
+; 
+; 		WriteReg8(3, aATA.lba0);
+			; SOURCE LINE # 364
+	MOV  	DPTR,#aATA+01CH
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#03H
+	LCALL	_WriteReg8
+; 
+;  		WriteReg8(4, aATA.lba4); 	// LBA Mid
+			; SOURCE LINE # 366
+	MOV  	DPTR,#aATA+020H
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#04H
+	LCALL	_WriteReg8
+; 
+; 		WriteReg8(4, aATA.lba1);
+			; SOURCE LINE # 368
+	MOV  	DPTR,#aATA+01DH
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#04H
+	LCALL	_WriteReg8
+; 
+;  		WriteReg8(5,aATA.lba5);	// LBA High
+			; SOURCE LINE # 370
+	MOV  	DPTR,#aATA+021H
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#05H
+	LCALL	_WriteReg8
+; 
+; 		WriteReg8(5,aATA.lba2);
+			; SOURCE LINE # 372
+	MOV  	DPTR,#aATA+01EH
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#05H
+	LCALL	_WriteReg8
+;      
+; 		WriteReg8(2, 0);	 		// Sector count
+			; SOURCE LINE # 374
+	CLR  	A
+	MOV  	R5,A
+	MOV  	R7,#02H
+; 	}
+			; SOURCE LINE # 375
+	SJMP 	?C0064
+?C0024:
+; 	else  // normal access
+; 	{
+			; SOURCE LINE # 377
+; 	//	printf("Normal\r\n");
+; 
+; 	 	WriteReg8(6, aATA.lba3);	// head
+			; SOURCE LINE # 380
+	MOV  	R7,#06H
+	LCALL	L?0065
+; 
+; 	  	// Wait for device to respond
+; 		WaitBusy();
+			; SOURCE LINE # 383
+	LCALL	WaitBusy
+; 
+; 		WriteReg8(3,aATA.lba0); 	// 	LBA low
+			; SOURCE LINE # 385
+	MOV  	DPTR,#aATA+01CH
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#03H
+	LCALL	_WriteReg8
+; 
+; 		WriteReg8(4,aATA.lba1);	// LBA Mid
+			; SOURCE LINE # 387
+	MOV  	DPTR,#aATA+01DH
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#04H
+	LCALL	_WriteReg8
+; 
+; 		WriteReg8(5,aATA.lba2);	// LBA High
+			; SOURCE LINE # 389
+	MOV  	DPTR,#aATA+01EH
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#05H
+?C0064:
+	LCALL	_WriteReg8
+; 	}
+			; SOURCE LINE # 390
+?C0025:
+; 
+; 	WriteReg8(2,aATA.sectors);	 	// Sector count
+			; SOURCE LINE # 392
+	MOV  	DPTR,#aATA+01AH
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#02H
+	LCALL	_WriteReg8
+; 		
+; 	WriteReg8(1,aATA.err);	  		// Err/Features
+			; SOURCE LINE # 394
+	MOV  	DPTR,#aATA+019H
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	MOV  	R7,#01H
+	LCALL	_WriteReg8
+; 
+; //	printf("Write values %02X %02X %02X %02X %02X %02X\r\n",(int)aATA.err,(int)aATA.sectors,(int)aATA.lba0,
+; //							(int)aATA.lba1,(int)aATA.lba2,(int)aATA.lba3);
+; 
+; //	DumpRegs();
+; 
+; 	if(aATA.acmd==0x24) 
+			; SOURCE LINE # 401
+	MOV  	DPTR,#aATA+01BH
+	MOVX 	A,@DPTR
+	CJNE 	A,#024H,?C0026
+; 		WriteReg8(7,0x20);
+			; SOURCE LINE # 402
+	MOV  	R5,#020H
+	SJMP 	?C0063
+?C0026:
+; 	else 	
+; 		WriteReg8(7,aATA.acmd);  		// CMD register
+			; SOURCE LINE # 404
+	MOV  	DPTR,#aATA+01BH
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+?C0063:
+	MOV  	R7,#07H
+	LCALL	_WriteReg8
+?C0027:
+; 		 
+; //	if(aATA.acmd ==   ATA_CMD_ID_ATA)
+; //		aATA.sectors = 1;			// identify transfers one sector
+; 	
+; 	// Set up block copy registers
+; 	m=(unsigned long)aATA.dat;
+			; SOURCE LINE # 410
+	MOV  	R3,#01H
+	MOV  	R2,#HIGH (aATA+024H)
+	MOV  	R1,#LOW (aATA+024H)
+	MOV  	R7,AR1
+	MOV  	R6,AR2
+	MOV  	R5,#01H
+	MOV  	R4,#00H
+	MOV  	DPTR,#m?1162
+	LCALL	?C?LSTXDATA
+; 	DPX1 = (uint8)(m>>16);
+			; SOURCE LINE # 411
+	MOV  	DPTR,#m?1162
+	MOVX 	A,@DPTR
+	MOV  	R4,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R6,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	MOV  	R0,#010H
+	LCALL	?C?ULSHR
+	MOV  	DPX1,R7
+; 	DPH1 = (uint8)(m>>8);
+			; SOURCE LINE # 412
+	MOV  	DPTR,#m?1162
+	MOVX 	A,@DPTR
+	MOV  	R4,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R6,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	MOV  	R0,#08H
+	LCALL	?C?ULSHR
+	MOV  	DPH1,R7
+; 	DPL1 = (uint8)(m);
+			; SOURCE LINE # 413
+	MOV  	DPTR,#m?1162
+	INC  	DPTR
+	INC  	DPTR
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	DPL1,A
+; 			 
+; 	p=aATA.dat;
+			; SOURCE LINE # 415
+	MOV  	DPTR,#p?1166
+	MOV  	A,R3
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R2
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R1
+	MOVX 	@DPTR,A
+; 
+; 	WaitBusy();
+			; SOURCE LINE # 417
+	LCALL	WaitBusy
+; 
+; //	printf("WaitBusy on %x = %d\r\n",(int)aATA.acmd,(int)WaitBusy());
+; 
+; 	// Writing to ATA?
+; 	if(aATA.aflag & 1)
+			; SOURCE LINE # 422
+	MOV  	DPTR,#aATA+018H
+	MOVX 	A,@DPTR
+	JB   	ACC.0,$ + 6H
+	LJMP 	?C0028
+; 	{
+			; SOURCE LINE # 423
+; 		blocks=0;
+			; SOURCE LINE # 424
+	CLR  	A
+	MOV  	DPTR,#blocks?1161
+	MOVX 	@DPTR,A
+; 
+; //		printf("Write status %x\r\n",(int)ide_status);
+; 			 	 
+; 		if(ide_status & (IDE_DRDY|IDE_DRQ))
+			; SOURCE LINE # 428
+	MOV  	DPTR,#ide_status
+	MOVX 	A,@DPTR
+	ANL  	A,#048H
+	JNZ  	$ + 5H
+	LJMP 	?C0035
+; 	    {
+			; SOURCE LINE # 429
+; 
+; 			// Address zero
+; 
+; 			P1 = IDE_CS_MASK | IDE_RD_MASK | IDE_WR_MASK | IDE_RESET_MASK | IDE_DIR_MASK;
+			; SOURCE LINE # 433
+	MOV  	P1,#0F8H
+; 			
+; 	wait_1us(1);
+			; SOURCE LINE # 435
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 			// CS=0
+; 			P1 = IDE_RD_MASK | IDE_WR_MASK | IDE_RESET_MASK | IDE_DIR_MASK;
+			; SOURCE LINE # 437
+	MOV  	P1,#0F0H
+; 			
+; 	wait_1us(1);
+			; SOURCE LINE # 439
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 			blk_cnt=aATA.sectors;
+			; SOURCE LINE # 440
+	MOV  	DPTR,#aATA+01AH
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#blk_cnt?1160
+	MOVX 	@DPTR,A
+?C0030:
+; 
+; 	//		DPS = 0x41;		// Select DPTR1
+; 					 
+; 
+; 			// Send the data to the device
+; 			while(blk_cnt!=0)
+			; SOURCE LINE # 446
+	MOV  	DPTR,#blk_cnt?1160
+	MOVX 	A,@DPTR
+	JNZ  	$ + 5H
+	LJMP 	?C0031
+; 			{
+			; SOURCE LINE # 447
+; 				--blk_cnt;
+			; SOURCE LINE # 448
+	DEC  	A
+	MOVX 	@DPTR,A
+; 				    
+; 			byte_cnt=0;
+			; SOURCE LINE # 450
+	CLR  	A
+	MOV  	DPTR,#byte_cnt?1159
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+?C0034:
+; 				do
+; 				{
+			; SOURCE LINE # 452
+; 
+; #if 0
+; #pragma ASM
+; 
+; 		MOVX A,@DPTR	
+; 		MOV  P2,A		
+; 		MOVX A,@DPTR	
+; 		MOV	 P3,A		
+; 
+; 		NOP
+; 		NOP
+; 		NOP
+; 		NOP
+; 		NOP
+; #pragma ENDASM
+; #endif
+; 	IDE_DATA_LSB = *p++;
+			; SOURCE LINE # 469
+	MOV  	DPTR,#p?1166
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	CLR  	A
+	MOV  	B,#01H
+	LCALL	?C?ILDIX
+	MOV  	R1,B
+	MOV  	R2,A
+	LCALL	?C?CLDPTR
+	MOV  	P2,A
+; 	IDE_DATA_MSB = *p++;
+			; SOURCE LINE # 470
+	MOV  	DPTR,#p?1166
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	CLR  	A
+	MOV  	B,#01H
+	LCALL	?C?ILDIX
+	MOV  	R1,B
+	MOV  	R2,A
+	LCALL	?C?CLDPTR
+	MOV  	P3,A
+; 			  
+; 	wait_1us(1);
+			; SOURCE LINE # 472
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 	// WR=0 RD=1 RESET=1 DIR=1 CS=0
+; 	P1 = IDE_RD_MASK | IDE_RESET_MASK | IDE_DIR_MASK;
+			; SOURCE LINE # 474
+	MOV  	P1,#0D0H
+; 
+; #pragma ASM
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; 		NOP
+	  NOP
+; #pragma ENDASM
+; 			 
+; 	wait_1us(1);
+			; SOURCE LINE # 489
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 	// WR=1 RD=1 RESET=1 CS=0 DIR=1
+; 	P1 = IDE_WR_MASK | IDE_RD_MASK | IDE_RESET_MASK | IDE_DIR_MASK;
+			; SOURCE LINE # 491
+	MOV  	P1,#0F0H
+; 			 
+; 	wait_1us(1);
+			; SOURCE LINE # 493
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; 				} while(++byte_cnt != 256);
+			; SOURCE LINE # 495
+	MOV  	DPTR,#byte_cnt?1159
+	CLR  	A
+	MOV  	B,#01H
+	LCALL	?C?IILDX
+	MOV  	R6,A
+	CLR  	A
+	CJNE 	A,B,?C0034
+	MOV  	A,R6
+	CJNE 	A,#01H,?C0034
+; 			}	
+			; SOURCE LINE # 496
+	LJMP 	?C0030
+?C0031:
+; 
+; 		    IDE_DATA_MSB=0xFF;
+			; SOURCE LINE # 498
+	MOV  	P3,#0FFH
+; 			IDE_DATA_LSB=0xFF;
+			; SOURCE LINE # 499
+	MOV  	P2,#0FFH
+; 			   
+; 	wait_1us(1);
+			; SOURCE LINE # 501
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 			P1 = IDE_CS_MASK | IDE_WR_MASK | IDE_RD_MASK | IDE_RESET_MASK | IDE_DIR_MASK;
+			; SOURCE LINE # 502
+	MOV  	P1,#0F8H
+; 				
+; 	wait_1us(1);
+			; SOURCE LINE # 504
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 	 
+;  		//	DPS = 0x00;		// Select DPTR0
+; 
+; 			WaitBusy();
+			; SOURCE LINE # 508
+	LCALL	WaitBusy
+; 		}
+			; SOURCE LINE # 509
+; 
+; 	}
+			; SOURCE LINE # 511
+	LJMP 	?C0035
+?C0028:
+; 	else
+; 	{
+			; SOURCE LINE # 513
+; 		blocks=0;
+			; SOURCE LINE # 514
+	CLR  	A
+	MOV  	DPTR,#blocks?1161
+	MOVX 	@DPTR,A
+; 		
+; 	//	printf("Read status %x\r\n",(int)ide_status);
+; 			 	 
+; 		if(ide_status & (IDE_DRDY|IDE_DRQ))
+			; SOURCE LINE # 518
+	MOV  	DPTR,#ide_status
+	MOVX 	A,@DPTR
+	ANL  	A,#048H
+	JNZ  	$ + 5H
+	LJMP 	?C0035
+; 	    {
+			; SOURCE LINE # 519
+; 		
+; 			blocks=aATA.sectors;
+			; SOURCE LINE # 521
+	MOV  	DPTR,#aATA+01AH
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#blocks?1161
+	MOVX 	@DPTR,A
+; 			blk_cnt=aATA.sectors;
+			; SOURCE LINE # 522
+	MOV  	DPTR,#blk_cnt?1160
+	MOVX 	@DPTR,A
+?C0037:
+; 
+;    	//		DPS = 0x41;		// Select DPTR1
+; 
+; 
+; 	//		 
+; 	//	printf("Read %d\r\n",(int)blk_cnt);
+; 			 
+; 			// Fetch data from the device
+; 			while(blk_cnt!=0)
+			; SOURCE LINE # 531
+	MOV  	DPTR,#blk_cnt?1160
+	MOVX 	A,@DPTR
+	JNZ  	$ + 5H
+	LJMP 	?C0038
+; 			{
+			; SOURCE LINE # 532
+; 				--blk_cnt;
+			; SOURCE LINE # 533
+	DEC  	A
+	MOVX 	@DPTR,A
+; 			
+; 			// This seems to set the I/O pin to input, must be open collector with pullup
+; 			IDE_DATA_MSB = 0xFF;
+			; SOURCE LINE # 536
+	MOV  	P3,#0FFH
+; 			IDE_DATA_LSB = 0xFF;
+			; SOURCE LINE # 537
+	MOV  	P2,#0FFH
+; 
+; 			// Address zero
+; 			P1 = IDE_DIR_MASK | IDE_CS_MASK | IDE_RD_MASK | IDE_WR_MASK | IDE_RESET_MASK;
+			; SOURCE LINE # 540
+	MOV  	P1,#0F8H
+; 					   	
+; 			
+; 	wait_1us(1);
+			; SOURCE LINE # 543
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 				
+; 	//	printf("Next Sector %d\r\n",(int)blk_cnt);
+; 	 
+; 				 
+; 				for(byte_cnt=256;byte_cnt!=0;--byte_cnt)
+			; SOURCE LINE # 548
+	MOV  	DPTR,#byte_cnt?1159
+	MOV  	A,#01H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	CLR  	A
+	MOVX 	@DPTR,A
+?C0039:
+	MOV  	DPTR,#byte_cnt?1159
+	MOVX 	A,@DPTR
+	JNZ  	?C0061
+	INC  	DPTR
+	MOVX 	A,@DPTR
+?C0061:
+	JZ   	?C0037
+; 				{
+			; SOURCE LINE # 549
+; 	 
+; 			// CS=0 DIR=0 RD=1 WR=1 RESET=1
+; 			P1 = IDE_RD_MASK | IDE_WR_MASK | IDE_RESET_MASK;
+			; SOURCE LINE # 552
+	MOV  	P1,#070H
+; 			   
+; 	wait_1us(1);
+			; SOURCE LINE # 554
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 	// CS=0	RD=0 DIR=0 RESET=1 WR=1
+; 	P1 = IDE_WR_MASK | IDE_RESET_MASK;
+			; SOURCE LINE # 556
+	MOV  	P1,#030H
+; 	
+; 	wait_1us(2);			
+			; SOURCE LINE # 558
+	MOV  	R7,#02H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 	//1.25us 
+; 
+; #if 0
+; #pragma ASM
+; 		NOP
+; 		NOP
+; 		NOP
+; 		NOP
+; 		NOP
+; 		NOP
+; 		NOP
+; 		NOP
+; 		NOP
+; 		NOP
+; 
+; 		MOV  A,P2		
+; 		MOVX @DPTR,A 	
+; 		MOV  A,P3		
+; 		MOVX @DPTR,A	
+; 
+; #pragma ENDASM
+; #endif
+; 	*p++ = IDE_DATA_LSB;
+			; SOURCE LINE # 581
+	MOV  	DPTR,#p?1166
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	CLR  	A
+	MOV  	B,#01H
+	LCALL	?C?ILDIX
+	MOV  	R1,B
+	MOV  	R2,A
+	MOV  	A,P2
+	LCALL	?C?CSTPTR
+; 	*p++ = IDE_DATA_MSB;
+			; SOURCE LINE # 582
+	MOV  	DPTR,#p?1166
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	CLR  	A
+	MOV  	B,#01H
+	LCALL	?C?ILDIX
+	MOV  	R1,B
+	MOV  	R2,A
+	MOV  	A,P3
+	LCALL	?C?CSTPTR
+; 		   
+; 	wait_1us(1);
+			; SOURCE LINE # 584
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 	// CS=0	RD=1 DIR=0 WR=1 RESET=1
+; 	P1 = IDE_WR_MASK | IDE_RD_MASK | IDE_RESET_MASK;
+			; SOURCE LINE # 586
+	MOV  	P1,#070H
+; 			
+; 	wait_1us(1);
+			; SOURCE LINE # 588
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 	 
+; 	// CS=1	RD=1 DIR=1 WR=1 RESET=1 
+; 	P1 = IDE_CS_MASK | IDE_WR_MASK | IDE_RD_MASK | IDE_RESET_MASK ;
+			; SOURCE LINE # 591
+	MOV  	P1,#078H
+; 					   
+; 	wait_1us(1);			
+			; SOURCE LINE # 593
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 
+; 				} 
+			; SOURCE LINE # 595
+	MOV  	DPTR,#byte_cnt?1159+01H
+	MOVX 	A,@DPTR
+	ADD  	A,#0FFH
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#byte_cnt?1159
+	MOVX 	A,@DPTR
+	ADDC 	A,#0FFH
+	MOVX 	@DPTR,A
+	SJMP 	?C0039
+; 			}
+			; SOURCE LINE # 596
+?C0038:
+; 			
+; 	// CS=1	RD=1 DIR=1 WR=1 RESET=1 
+; 	P1 = IDE_CS_MASK | IDE_WR_MASK | IDE_RD_MASK | IDE_RESET_MASK | IDE_DIR_MASK ;
+			; SOURCE LINE # 599
+	MOV  	P1,#0F8H
+; 					   
+; 	wait_1us(1);	
+			; SOURCE LINE # 601
+	MOV  	R7,#01H
+	MOV  	R6,#00H
+	LCALL	_wait_1us
+; 			
+; 				}
+			; SOURCE LINE # 603
+; 
+; //		DPS = 0x0;		// Select DPTR0
+; 
+; #if 0
+; 	// dump contents of packet
+; 	 
+; 	 for(i=0;i<32;i++)
+; 	 {
+; 		for(j=0;j<16;j++)
+; 		{
+; 			printf("%02X ",(int)aATA.dat[j+(i<<4)]);
+; 		}
+; 		printf("\r\n");
+; 	 }
+; #endif
+; 
+; 	}
+			; SOURCE LINE # 620
+?C0035:
+; 
+; 	// Copy registers from device to response packet
+;   	aATA.lba0 = ReadReg8(3); 	// 	LBA low
+			; SOURCE LINE # 623
+	MOV  	R7,#03H
+	LCALL	_ReadReg8
+	MOV  	DPTR,#aATA+01CH
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; 	aATA.lba1 = ReadReg8(4);	// LBA Mid
+			; SOURCE LINE # 624
+	MOV  	R7,#04H
+	LCALL	_ReadReg8
+	MOV  	DPTR,#aATA+01DH
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; 	aATA.lba2 = ReadReg8(5);	// LBA High
+			; SOURCE LINE # 625
+	MOV  	R7,#05H
+	LCALL	_ReadReg8
+	MOV  	DPTR,#aATA+01EH
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; 	aATA.err = ReadReg8(1);   	// Err/Features
+			; SOURCE LINE # 626
+	MOV  	R7,#01H
+	LCALL	_ReadReg8
+	MOV  	DPTR,#aATA+019H
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; 	aATA.sectors = ReadReg8(2); // Sector count
+			; SOURCE LINE # 627
+	MOV  	R7,#02H
+	LCALL	_ReadReg8
+	MOV  	DPTR,#aATA+01AH
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; 	aATA.acmd =ReadReg8(7);		// Status
+			; SOURCE LINE # 628
+	MOV  	R7,#07H
+	LCALL	_ReadReg8
+	MOV  	DPTR,#aATA+01BH
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; 
+; 	aATA.header.flags = 0x18;
+			; SOURCE LINE # 630
+	MOV  	DPTR,#aATA+0EH
+	MOV  	A,#018H
+	MOVX 	@DPTR,A
+; 
+;     aATA.header.major = MY_MAJOR;
+			; SOURCE LINE # 632
+	MOV  	DPTR,#aATA+010H
+	CLR  	A
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	INC  	A
+	MOVX 	@DPTR,A
+; 	aATA.header.minor = MY_MINOR;
+			; SOURCE LINE # 633
+	CLR  	A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+; 	aATA.header.msg_type = AOE_TYPE;
+			; SOURCE LINE # 634
+	MOV  	DPTR,#aATA+0CH
+	MOV  	A,#088H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#0A2H
+	MOVX 	@DPTR,A
+; 
+; 	aATA.header.dst_mac[0] = aATA.header.src_mac[0];
+			; SOURCE LINE # 636
+	MOV  	DPTR,#aATA+06H
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#aATA
+	MOVX 	@DPTR,A
+;   	aATA.header.dst_mac[1] = aATA.header.src_mac[1];
+			; SOURCE LINE # 637
+	MOV  	DPTR,#aATA+07H
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#aATA+01H
+	MOVX 	@DPTR,A
+; 	aATA.header.dst_mac[2] = aATA.header.src_mac[2];
+			; SOURCE LINE # 638
+	MOV  	DPTR,#aATA+08H
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#aATA+02H
+	MOVX 	@DPTR,A
+; 	aATA.header.dst_mac[3] = aATA.header.src_mac[3];
+			; SOURCE LINE # 639
+	MOV  	DPTR,#aATA+09H
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#aATA+03H
+	MOVX 	@DPTR,A
+; 	aATA.header.dst_mac[4] = aATA.header.src_mac[4];
+			; SOURCE LINE # 640
+	MOV  	DPTR,#aATA+0AH
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#aATA+04H
+	MOVX 	@DPTR,A
+; 	aATA.header.dst_mac[5] = aATA.header.src_mac[5];
+			; SOURCE LINE # 641
+	MOV  	DPTR,#aATA+0BH
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#aATA+05H
+	MOVX 	@DPTR,A
+; 
+; 	aATA.header.src_mac[0] = src_mac[0];
+			; SOURCE LINE # 643
+	MOV  	DPTR,#src_mac?1158
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	LCALL	?C?CLDPTR
+	MOV  	DPTR,#aATA+06H
+	MOVX 	@DPTR,A
+; 	aATA.header.src_mac[1] = src_mac[1];
+			; SOURCE LINE # 644
+	MOV  	DPTR,#01H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#aATA+07H
+	MOVX 	@DPTR,A
+; 	aATA.header.src_mac[2] = src_mac[2];
+			; SOURCE LINE # 645
+	MOV  	DPTR,#02H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#aATA+08H
+	MOVX 	@DPTR,A
+; 	aATA.header.src_mac[3] = src_mac[3];
+			; SOURCE LINE # 646
+	MOV  	DPTR,#03H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#aATA+09H
+	MOVX 	@DPTR,A
+; 	aATA.header.src_mac[4] = src_mac[4];
+			; SOURCE LINE # 647
+	MOV  	DPTR,#04H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#aATA+0AH
+	MOVX 	@DPTR,A
+; 	aATA.header.src_mac[5] = src_mac[5];
+			; SOURCE LINE # 648
+	MOV  	DPTR,#05H
+	LCALL	?C?CLDOPTR
+	MOV  	DPTR,#aATA+0BH
+	MOVX 	@DPTR,A
+; 						 
+;  //	wizmemcpy((unsigned long)&aATA.header.src_mac, (unsigned long)&aATA.header.dst_mac,ETHER_ADDR_LEN);
+; //	wizmemcpy((unsigned long)src_mac, (unsigned long)&aATA.header.src_mac, ETHER_ADDR_LEN);
+; 
+; 	byte_cnt=sizeof(AtaIssue)-(SECTOR_SIZE*2)+(blocks<<SECTOR_SHIFT);
+			; SOURCE LINE # 653
+	MOV  	DPTR,#blocks?1161
+	MOVX 	A,@DPTR
+	ADD  	A,ACC
+	MOV  	R6,A
+	CLR  	A
+	ADD  	A,#024H
+	MOV  	R7,A
+	CLR  	A
+	ADDC 	A,R6
+	MOV  	R6,A
+	MOV  	DPTR,#byte_cnt?1159
+	MOVX 	@DPTR,A
+	MOV  	R4,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	MOV  	R5,A
+; 
+;  	return sendto(s,(uint8*)&aATA,byte_cnt,(uint8 *)&tip,3000);
+			; SOURCE LINE # 655
+	MOV  	DPTR,#s?1157
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_sendto?BYTE+04H
+	MOV  	A,R4
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R5
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#01H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#HIGH (tip?1163)
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#LOW (tip?1163)
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#0BH
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#0B8H
+	MOVX 	@DPTR,A
+	MOV  	R3,#01H
+	MOV  	R2,#HIGH (aATA)
+	MOV  	R1,#LOW (aATA)
+	LCALL	_sendto
+; 
+; }
+			; SOURCE LINE # 657
+?C0042:
+	RET  	
+; END OF _ATAHandler
+
+; 
+; void init_ata_hardware(void)
+
+	RSEG  ?PR?init_ata_hardware?ATAOE
+init_ata_hardware:
+			; SOURCE LINE # 659
+; {
+			; SOURCE LINE # 660
+; 
+; 	// Set DDRs to input
+; 
+; 	IDE_DATA_LSB=0xFF;
+			; SOURCE LINE # 664
+	MOV  	P2,#0FFH
+;   	IDE_DATA_MSB=0xFF;
+			; SOURCE LINE # 665
+	MOV  	P3,#0FFH
+; 
+;  	// CS=1 RD=1 WR=1 RESET=1 DIR=1 ADDR=0
+; 	P1 = IDE_CS_MASK | IDE_RD_MASK | IDE_WR_MASK | IDE_RESET_MASK | IDE_DIR_MASK;
+			; SOURCE LINE # 668
+	MOV  	P1,#0F8H
+; 	
+; }
+			; SOURCE LINE # 670
+	RET  	
+; END OF init_ata_hardware
+
+; 
+; 
+; uint8 init_ata(void)
+
+	RSEG  ?PR?init_ata?ATAOE
+init_ata:
+	USING	0
+			; SOURCE LINE # 673
+; {
+			; SOURCE LINE # 674
+; 
+; 	init_ata_hardware();
+			; SOURCE LINE # 676
+	LCALL	init_ata_hardware
+; 
+; 	ResetBus();
+			; SOURCE LINE # 678
+	LCALL	ResetBus
+; 
+; 	return WaitBusy();
+			; SOURCE LINE # 680
+	LCALL	WaitBusy
+; 
+; }
+			; SOURCE LINE # 682
+?C0044:
+	RET  	
+; END OF init_ata
+
+; 
+; 
+; void ataoe(SOCKET s,uint8 *mac)
+
+	RSEG  ?PR?_ataoe?ATAOE
+_ataoe:
+	USING	0
+			; SOURCE LINE # 685
+	MOV  	DPTR,#s?1467
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R3
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R2
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R1
+	MOVX 	@DPTR,A
+; {
+			; SOURCE LINE # 686
+; 	uint16 xdata rlen =0;
+			; SOURCE LINE # 687
+	CLR  	A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+;  	uint16 xdata mac_destport;
+; 	uint16 xdata len =0;
+			; SOURCE LINE # 689
+	MOV  	DPTR,#len?1471
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOVX 	@DPTR,A
+; 	uint8 xdata mac_destip[4];
+; 
+; 	init_ata();
+			; SOURCE LINE # 692
+	LCALL	init_ata
+?C0045:
+; 
+; 	  	while(1)
+			; SOURCE LINE # 694
+; 		{
+			; SOURCE LINE # 695
+; 			switch(getSn_SR(s))
+			; SOURCE LINE # 696
+	MOV  	DPTR,#s?1467
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	LCALL	_getSn_SR
+	MOV  	A,R7
+	ADD  	A,#0BEH
+	JZ   	?C0049
+	ADD  	A,#042H
+	JNZ  	?C0045
+; 			{
+			; SOURCE LINE # 697
+; 				case SOCK_CLOSED:
+			; SOURCE LINE # 698
+?C0048:
+; 					close(s);                              // close the SOCKET
+			; SOURCE LINE # 699
+	MOV  	DPTR,#s?1467
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	LCALL	_close
+; 					socket(s,Sn_MR_MACRAW,3000,0);            // open the SOCKET with MACRAW mode
+			; SOURCE LINE # 700
+	MOV  	DPTR,#s?1467
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	CLR  	A
+	MOV  	DPTR,#?_socket?BYTE+04H
+	MOVX 	@DPTR,A
+	MOV  	R3,#0B8H
+	MOV  	R2,#0BH
+	MOV  	R5,#04H
+	LCALL	_socket
+; 					break;
+			; SOURCE LINE # 701
+	SJMP 	?C0045
+; 	
+; 				case SOCK_MACRAW:
+			; SOURCE LINE # 703
+?C0049:
+; 	
+; 					if ( (rlen = getSn_RX_RSR(s) ) > 0)
+			; SOURCE LINE # 705
+	MOV  	DPTR,#s?1467
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	LCALL	_getSn_RX_RSR
+	MOV  	DPTR,#rlen?1469
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+	SETB 	C
+	SUBB 	A,#00H
+	MOV  	A,R6
+	SUBB 	A,#00H
+	JC   	?C0045
+; 					{
+			; SOURCE LINE # 706
+; 						/* receive data from a destination */
+; 						len = recvfrom(s,(uint8 *)&aATA,rlen,mac_destip,&mac_destport);
+			; SOURCE LINE # 708
+	MOV  	DPTR,#s?1467
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	MOV  	DPTR,#rlen?1469
+	MOVX 	A,@DPTR
+	MOV  	R5,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	DPTR,#?_recvfrom?BYTE+04H
+	XCH  	A,R5
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R5
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#01H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#HIGH (mac_destip?1472)
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#LOW (mac_destip?1472)
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#01H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#HIGH (mac_destport?1470)
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#LOW (mac_destport?1470)
+	MOVX 	@DPTR,A
+	MOV  	R3,#01H
+	MOV  	R2,#HIGH (aATA)
+	MOV  	R1,#LOW (aATA)
+	LCALL	_recvfrom
+	MOV  	DPTR,#len?1471
+	MOV  	A,R6
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,R7
+	MOVX 	@DPTR,A
+; 
+; 						if(aATA.header.msg_type == AOE_TYPE)
+			; SOURCE LINE # 710
+	MOV  	DPTR,#aATA+0CH
+	MOVX 	A,@DPTR
+	XRL  	A,#088H
+	JNZ  	?C0062
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	XRL  	A,#0A2H
+?C0062:
+	JZ   	$ + 5H
+	LJMP 	?C0045
+; 						{
+			; SOURCE LINE # 711
+; 						    switch(aATA.header.cmd)
+			; SOURCE LINE # 712
+	MOV  	DPTR,#aATA+013H
+	MOVX 	A,@DPTR
+	DEC  	A
+	JZ   	?C0055
+	DEC  	A
+	JZ   	?C0056
+	DEC  	A
+	JZ   	?C0057
+	ADD  	A,#03H
+	JZ   	$ + 5H
+	LJMP 	?C0045
+; 							{
+			; SOURCE LINE # 713
+; 								default: break;
+			; SOURCE LINE # 714
+;  
+; 								case AOE_CMD_ATA:
+			; SOURCE LINE # 716
+?C0054:
+; 
+; 									ATAHandler(s,mac);
+			; SOURCE LINE # 718
+	MOV  	DPTR,#s?1467
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	LCALL	_ATAHandler
+; 									break;
+			; SOURCE LINE # 719
+	LJMP 	?C0045
+; 								case AOE_CMD_CONFIG:
+			; SOURCE LINE # 720
+?C0055:
+; 
+; 									SendConfigAck(s,mac,(AtaConfig *)&aATA);
+			; SOURCE LINE # 722
+	MOV  	DPTR,#s?1467
+	MOVX 	A,@DPTR
+	MOV  	R7,A
+	MOV  	DPTR,#?_SendConfigAck?BYTE+04H
+	MOV  	A,#01H
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#HIGH (aATA)
+	MOVX 	@DPTR,A
+	INC  	DPTR
+	MOV  	A,#LOW (aATA)
+	MOVX 	@DPTR,A
+	MOV  	DPTR,#mac?1468
+	MOVX 	A,@DPTR
+	MOV  	R3,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R2,A
+	INC  	DPTR
+	MOVX 	A,@DPTR
+	MOV  	R1,A
+	LCALL	_SendConfigAck
+; 									break;
+			; SOURCE LINE # 723
+	LJMP 	?C0045
+; 								case AOE_CMD_MAC_MASK:
+			; SOURCE LINE # 724
+?C0056:
+; 									DumpATAMacMask((AtaMACMask *)&aATA);
+			; SOURCE LINE # 725
+	MOV  	R3,#01H
+	MOV  	R2,#HIGH (aATA)
+	MOV  	R1,#LOW (aATA)
+	LCALL	_DumpATAMacMask
+; 									break;
+			; SOURCE LINE # 726
+	LJMP 	?C0045
+; 								case AOE_CMD_RESERVE_RELEASE:
+			; SOURCE LINE # 727
+?C0057:
+; 									DumpATAReserveRelease((AtaReserveRelease *)&aATA);
+			; SOURCE LINE # 728
+	MOV  	R3,#01H
+	MOV  	R2,#HIGH (aATA)
+	MOV  	R1,#LOW (aATA)
+	LCALL	_DumpATAReserveRelease
+; 									break;
+			; SOURCE LINE # 729
+	LJMP 	?C0045
+; END OF _ataoe
+
+	END

@@ -1,0 +1,12 @@
+"wizmemcpy.obj",
+"delay.obj",
+"main.obj",
+"serial.obj",
+"socket.obj",
+"sockutil.obj",
+"TCPIPCore.obj",
+"STARTUP.obj",
+"lcd.obj",
+"ataoe.obj" 
+TO "BudgetNAS" 
+RAMSIZE(256) 
